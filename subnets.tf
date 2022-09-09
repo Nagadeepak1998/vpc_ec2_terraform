@@ -1,7 +1,7 @@
 resource "aws_subnet" "pub_sub" {
     vpc_id = aws_vpc.vpc1.id
     # enable_dns64 = true
-    availability_zone="us-east-2a"
+    availability_zone="ap-southeast-1"
     cidr_block = "10.0.0.0/24"
     map_public_ip_on_launch = true
     tags={
@@ -13,7 +13,7 @@ resource "aws_subnet" "pub_sub" {
 
 resource "aws_subnet" "priv_sub" {
     vpc_id = aws_vpc.vpc1.id
-    availability_zone="us-east-2b"
+    availability_zone="ap-southeast1"
     cidr_block = "10.0.1.0/24"
     tags={
         Name = "Private_Subnet"
